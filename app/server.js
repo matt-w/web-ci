@@ -10,6 +10,10 @@ app.use(function *(next){
   console.log('%s %s - %s', this.method, this.url, ms);
 });
 
+router.get('/', function *() {
+	this.body = 'Home Page';
+});
+
 router.get('/api/lorem-ipsum', function *() {
   this.body = {
     body: lorem({
