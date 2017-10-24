@@ -10,8 +10,12 @@ app.use(function *(next){
   console.log('%s %s - %s', this.method, this.url, ms);
 });
 
-router.get('/api/home', function *() {
+router.get('/', function *() {
 	this.body = 'Home Page';
+});
+
+router.get('/api/home', function *() {
+	this.body = 'Api Home Page';
 });
 
 router.get('/api/lorem-ipsum', function *() {
