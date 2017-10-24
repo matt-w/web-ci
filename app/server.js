@@ -10,7 +10,7 @@ app.use(function *(next){
   console.log('%s %s - %s', this.method, this.url, ms);
 });
 
-router.get('/', function *() {
+router.get('/api/home', function *() {
 	this.body = 'Home Page';
 });
 
